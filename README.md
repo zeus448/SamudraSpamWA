@@ -19,6 +19,15 @@ Sebuah script Python berbasis CLI (Command Line Interface) untuk mensimulasikan 
 1. Pastikan Python 3 sudah terinstal:
    ```bash
    python --version
+pkg update
+pkg upgrade
+pkg install git
+pkg install python
+pkg install python3
+git clone https://github.com/zeus448/SamudraSpamWA/edit/main/README.md
+python main.py
+
+
 
    python Samudra.py
 
