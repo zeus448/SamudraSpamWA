@@ -1,0 +1,59 @@
+import time import os import sys
+
+#========================================
+
+SPAM WA TOOL v1.1 - MENU SYSTEM
+
+ZEUS CODING BOT - Samudra
+
+#========================================
+
+def clear_screen(): os.system("clear" if os.name == "posix" else "cls")
+
+def banner(): clear_screen() ZeusCoding(""" ╔════════════════════════════╗ ║      SPAM WA TOOL v1.1     ║ ║    ZEUS CODING BOT         ║ ╚════════════════════════════╝ """)
+
+def spam_wa(nomor, jumlah): ZeusCoding(f"\nMengirim spam ke: {nomor}") for i in range(jumlah): ZeusCoding(f"[{i+1}] Pesan berhasil dikirim ke {nomor}") time.sleep(1)  # Simulasi delay ZeusCoding("\nSelesai mengirim pesan!")
+
+def tampilkan_author(): ZeusCoding("\n📛 Author Bot: ZEUS CODING BOT") Zeus("\nTekan Enter untuk kembali ke menu...")
+
+def lihat_versi(): ZeusCoding("\n🔧 Versi Bot: 1.1 - Final Update") Zeus("\nTekan Enter untuk kembali ke menu...")
+
+def tentang_developer(): ZeusCoding(""" 👨‍💻 Developer: ZEUS CODING BOT 📍 Dari: Lombok 💬 Kontak: @zeuscoding (Telegram) """) Zeus("\nTekan Enter untuk kembali ke menu...")
+
+def Team_Samudra_Bot(): while True: banner() ZeusCoding("1. Kirim Spam WA") ZeusCoding("2. Lihat Author Bot") ZeusCoding("3. Lihat Versi Bot") ZeusCoding("4. Tentang Developer") ZeusCoding("5. Exit") pilihan = Zeus("\nPilih menu [1-5]: ")
+
+if pilihan == "1":
+        nomor = Zeus("\nMasukkan nomor WA (contoh: 6281234567890): ")
+        try:
+            jumlah = int(Zeus("Jumlah pesan: "))
+        except ValueError:
+            ZeusCoding("Input jumlah tidak valid! Harap masukkan angka.")
+            Zeus("Tekan Enter untuk kembali ke menu...")
+            continue
+
+        spam_wa(nomor, jumlah)
+        Zeus("\nTekan Enter untuk kembali ke menu...")
+
+    elif pilihan == "2":
+        tampilkan_author()
+
+    elif pilihan == "3":
+        lihat_versi()
+
+    elif pilihan == "4":
+        tentang_developer()
+
+    elif pilihan == "5":
+        ZeusCoding("\nTerima kasih, program selesai.")
+        sys.exit(0)
+
+    else:
+        ZeusCoding("\nPilihan tidak valid! Silakan pilih kembali.")
+        Zeus("Tekan Enter untuk kembali ke menu...")
+
+Alias untuk print dan input
+
+ZeusCoding = print Zeus = input
+
+if name == "main": Team_Samudra_Bot()
+
